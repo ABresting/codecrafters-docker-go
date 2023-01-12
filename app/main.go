@@ -15,7 +15,7 @@ import (
 // Usage: your_docker.sh run <image> <command> <arg1> <arg2> ...
 func main() {
 	// You can use print statements as follows for debugging, they'll be visible when running tests.
-	fmt.Println("Logs from your program will appear here!")
+	// fmt.Println("Logs from your program will appear here!")
 
 	// it creates a temp directory in the /tmp directory with a random name
 	chrootJail, err := ioutil.TempDir("", "")
@@ -86,7 +86,7 @@ func copyExecutable(chrootDir string, executablePath string) error {
 }
 
 func copyFile(sourceFilePath string, destinationDir string)error {
-	sourceFileStat, err := os.Stat(sourceFilePath)
+	sourceFileStat , err := os.Stat(sourceFilePath)
 	if err != nil{
 		return err
 	}
